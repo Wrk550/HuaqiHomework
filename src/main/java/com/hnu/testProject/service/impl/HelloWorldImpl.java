@@ -8,6 +8,6 @@ public class HelloWorldImpl implements HelloWorld {
 
   @Override
   public String func() {
-    return "Hello World!";
+    return " Hello World! ";
   }
 }
