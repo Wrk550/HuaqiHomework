@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hnu.testProject.dao.TradeDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.hnu.testProject.entity.TradeEntity" id="tradeMap">
+        <result property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="date" column="date"/>
+        <result property="clientName" column="client_name"/>
+        <result property="clientSide" column="client_side"/>
+        <result property="ticker" column="ticker"/>
+        <result property="ric" column="ric"/>
+        <result property="size" column="size"/>
+        <result property="price" column="price"/>
+        <result property="notionalUsd" column="notional_usd"/>
+        <result property="currency" column="currency"/>
+        <result property="issueSector" column="issue_sector"/>
+        <result property="salesperson" column="salesperson"/>
+        <result property="htPt" column="ht_pt"/>
+        <result property="createdAt" column="created_at"/>
+    </resultMap>
+
+
+</mapper>
