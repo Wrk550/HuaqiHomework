@@ -12,7 +12,11 @@ public class HelloWorldController {
 
   @GetMapping("/hello")
   public String helloWorld() {
-    return helloWorld.func();
+    System.out.println("ThreadName:" + Thread.currentThread().getName());
+    System.out.println("开始执行test");
+    helloWorld.test();
+    System.out.println(Thread.currentThread().getName() + "执行完毕");
+    return "result";
   }
 
 }
