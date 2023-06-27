@@ -1,0 +1,123 @@
+body{
+  background-color: #10161d;
+}
+
+ul {
+  padding-left: 5px;
+}
+
+ul li {
+  list-style: none;
+  display: inline;
+  cursor: pointer;
+}
+
+label{
+  color: #e9eef3;
+}
+
+.form-control {
+  background-color: rgba(61, 86, 111, 0.4);
+  /* color: rgba(61, 86, 111, 0.4); */
+  border-color: #46637f;
+}
+.container {
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 20px;
+}
+
+div .form-group{
+  margin-bottom: 0;
+}
+
+.root input {
+  width: 120px;
+}
+
+.root {
+  margin-top: 10px;
+}
+
+.table{
+  margin-top: 10px;
+  margin-bottom: 3px;
+  background-color: #19232e;
+  color: #e9eef3;
+}
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+  border: 1px solid #46637f;
+}
+
+.btn-primary {
+  color: #80aff8;
+  background-color: #34495f;
+  border-color:#34495f;
+}
+
+table > thead {
+  background-color: #34495f;
+}
+
+.table tbody tr:nth-child(1) td:nth-child(3),tr:nth-child(1) td:nth-child(6){
+  color: #00b755;
+}
+
+.table tbody tr:nth-child(2) td:nth-child(3),td:nth-child(6),tr:nth-child(3) td:nth-child(3),tr:nth-child(4) td:nth-child(3){
+  color: #ff7a75;
+}
+
+.button-list > *{
+  background-color: #34495f;
+  color: #80aff8;
+}
+
+hr {
+  margin-top: 16px;
+  border-top: 1px solid #46637f;
+}
+
+.table tr:hover{
+  background-color: #34495f;
+}
+
+.table-bordered {
+  border: 1px solid #30000f;
+}
+
+.btn-default {
+  border-color: #30000f;
+}
+
+.statistic-data {
+  /* text-indent: 25px; */
+  margin: 0, 20px, 0, 20px;
+}
+
+.right {
+  float: right;
+  margin-right: 15px;
+}
+.statistic-data > .right > .total-records {
+  color: #80aff8;
+}
+
+.statistic-data > .total-buy,.total-buy-notional {
+  color: #00b755;
+  margin-left: 15px;
+}
+
+.statistic-data > .total-sell,.total-sell-notional {
+  color: #ff7a75;
+  margin-left: 15px;
+}
+
+.statistic-data > .net-quantity,.net-notional {
+  color: #46637f;
+  margin-left: 15px;
+}
+
