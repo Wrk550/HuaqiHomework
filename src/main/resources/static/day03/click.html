@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="module">
+    import {addItem,removeItem} from "./script.js";
+    window.addItem = addItem;
+    window.removeItem = removeItem;
+  </script>
+</head>
+<body>
+  <input type="text" id="inputText">
+  <button onclick="addItem()">添加</button>
+  <div id="stringList">
+    <!-- 这里将显示添加的字符串 -->
+
+  </div>
+</body>
+</html>

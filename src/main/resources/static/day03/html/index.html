@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>test</title>
-  <link rel="stylesheet" href="../plugins/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <title>CITI</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="../css/style.css"> -->
+  <script src="../../../../../../dist/main.js"></script>
 </head>
 
 <body>
@@ -22,64 +23,72 @@
         <input type="radio" name="options" id="nlp-trade">NLP Trade
       </label>
     </div>
-    <div class="root">
-      <div class="form-row">
-        <div class="form-group col-md-1">
-          <label>Client Name:
-            <input class="form-control input-sm" type="text" name="clientName" placeholder="Text input">
+    <div class="header">
+      <div class="root">
+        <!-- <form action="action" method="post" id="form"> -->
+        <div class="inline-box">
+          <label class="input-list"><span class="top-title">Client Name</span>
+            <input class="form-control input-sm" type="text" id="clientName" name="clientName" placeholder="Text input">
           </label>
         </div>
-        <div class="form-group col-md-1">
-          <label>Ticker:
-            <input class="form-control input-sm" type="text" name="ticker" placeholder="Text input">
+        <div class="inline-box">
+          <label class="input-list"><span class="top-title">Ticker</span>
+            <input class="form-control input-sm" type="text" id="ticker" name="ticker" placeholder="Text input">
           </label>
         </div>
-        <div class="form-group col-md-1">
-          <label>RIC:
-            <input class="form-control input-sm" type="text" name="ric" placeholder="Text input">
+        <div class="inline-box">
+          <label class="input-list"><span class="top-title">RIC</span>
+            <input class="form-control input-sm" type="text" id="ric" name="ric" placeholder="Text input">
           </label>
         </div>
-        <div class="form-group col-md-1">
-          <label>Size:
-            <input class="form-control input-sm" type="text" name="size" placeholder="Text input">
+        <div class="inline-box">
+          <label class="input-list"><span class="top-title">Size</span>
+            <input class="form-control input-sm" type="text" id="size" name="size" placeholder="Text input">
           </label>
         </div>
-        <div class="form-group col-md-1">
-          <label>Price:
-            <input class="form-control input-sm" type="text" name="price" placeholder="Text input">
+        <div class="inline-box">
+          <label class="input-list"><span class="top-title">Price</span>
+            <input class="form-control input-sm" type="text" id="price" name="price" placeholder="Text input">
           </label>
         </div>
-        <div class="form-group col-md-1">
-          <label for="currency">Currency:
+        <div class="inline-box">
+          <label class="input-list" for="currency"><span class="top-title">Currency</span>
             <input class="form-control input-sm" type="text" id="currency" name="currency" placeholder="Text input">
           </label>
         </div>
-        <div class="form-group col-md-1">
-          <label for="issueSector">Issue Sector:
-            <input class="form-control input-sm" type="text" id="issueSector"  name="issueSector" placeholder="Text input">
+        <div class="inline-box">
+          <label class="input-list" for="issueSector"><span class="top-title">Issue Sector</span>
+            <input class="form-control input-sm" type="text" id="issueSector" name="issueSector"
+              placeholder="Text input">
           </label>
         </div>
-        <div class="form-group col-md-1">
-          <label>Salesperson:
-            <input class="form-control input-sm" type="text" name="salesperson" placeholder="Text input">
+        <div class="inline-box">
+          <label class="input-list"><span class="top-title">Salesperson</span>
+            <input class="form-control input-sm" type="text" id="salesperson" name="salesperson"
+              placeholder="Text input">
           </label>
         </div>
-        <div class="form-group col-md-1">
-          <label>HT/PT:
-            <select name="htpt" id="input" class="form-control input-sm col-md-1" required="required">
-              <option value="ht">HT</option>
-              <option value="pt">PT</option>
+        <div class="inline-box">
+          <label class="input-list"><span class="top-title">HT/PT</span>
+            <select name="htpt" id="htpt" class="form-control input-sm" style="width: 120px;" required="required">
+              <option value="HT">HT</option>
+              <option value="PT">PT</option>
             </select>
           </label>
         </div>
-        <div class="form-group">
-          <label>&nbsp;
-            <button class="form-control input-sm" style="background-color: #00b755;" type="submit">Buy</button>
-          </label>
-          <label>&nbsp;
-            <button class="form-control input-sm" style="background-color: #ffcd00;" type="submit">Sell</button>
-          </label>
-        </div>
+        <!-- </form> -->
+      </div>
+      <div class="buttonClass">
+        <!-- <div class="subButtonClass"> -->
+        <label>
+          <button class="form-control input-sm" style="background-color: #00b755;" onclick="buyHandler()"
+            type="submit">Buy</button>
+        </label>
+        <label>
+          <button class="form-control input-sm" style="background-color: #ffcd00;" onclick="sellHandler()"
+            type="submit">Sell</button>
+        </label>
+        <!-- </div> -->
       </div>
     </div>
     <hr>
@@ -115,7 +124,7 @@
         <tr>
           <td>Date</td>
           <td>Client Name</td>
-          <td>Client Side</td>
+          <td>Buy</td>
           <td>Ticker</td>
           <td>RIC</td>
           <td style="text-align: right;">Size</td>
@@ -143,7 +152,7 @@
         <tr>
           <td>Date</td>
           <td>Client Name</td>
-          <td>Client Side</td>
+          <td>Sell</td>
           <td>Ticker</td>
           <td>RIC</td>
           <td style="text-align: right;">Size</td>
@@ -157,7 +166,7 @@
         <tr>
           <td>Date</td>
           <td>Client Name</td>
-          <td>Client Side</td>
+          <td>Sell</td>
           <td>Ticker</td>
           <td>RIC</td>
           <td style="text-align: right;">Size</td>
@@ -171,15 +180,23 @@
       </tbody>
     </table>
     <div class="statistic-data">
-      <span class="total-buy">Total Buy: </span><span style="color: #e9eef3;">1.300.26</span>
-      <span class="total-sell">Total Sell: </span><span style="color: #e9eef3;">1.300.26</span>
-      <span class="net-quantity">Net Quantity: </span><span style="color: #e9eef3;">1.300.26</span>
-      <span class="total-buy-notional">Total Buy Notional: </span><span style="color: #e9eef3;">1.300.26</span>
-      <span class="total-sell-notional">Total Sell Notional: </span><span style="color: #e9eef3;">1.300.26</span>
-      <span class="net-notional">Net Notional: </span><span style="color: #e9eef3;">1.300.26</span>
-      <span class="right"><span class="total-records">Total Records: </span><span style="color: #80aff8;">4</span></span>
+      <div class="box1">
+        <span class="total-buy">Total Buy: </span><span style="color: #e9eef3;">1.300.26</span>
+        <span class="total-sell">Total Sell: </span><span style="color: #e9eef3;">1.300.26</span>
+        <span class="net-quantity">Net Quantity: </span><span style="color: #e9eef3;">1.300.26</span>
+        <span class="total-buy-notional">Total Buy Notional: </span><span style="color: #e9eef3;">1.300.26</span>
+        <span class="total-sell-notional">Total Sell Notional: </span><span style="color: #e9eef3;">1.300.26</span>
+        <span class="net-notional">Net Notional: </span><span style="color: #e9eef3;">1.300.26</span>
+      </div>
+      <div class="box2">
+        <span class="total-records">Total Records: <span>4</span></span>
+      </div>
     </div>
   </div>
+
+  <script src="../js/main.js"></script>
+
 </body>
+
 
 </html>
